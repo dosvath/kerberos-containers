@@ -1,3 +1,5 @@
+# Based on https://github.com/ist-dsi/docker-kerberos/blob/master/kdc-kadmin/init-script.sh
+# by Simão Martins and David Duarte
 #!/bin/bash
 echo "==================================================================================="
 echo "==== Kerberos KDC and Kadmin ======================================================"

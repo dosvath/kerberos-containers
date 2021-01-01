@@ -15,3 +15,4 @@ ENV KADMIN_PASSWORD ${KADMIN_PASSWORD:-adminpassword}
 
 COPY init-script.sh /tmp/
 CMD /tmp/init-script.sh
+

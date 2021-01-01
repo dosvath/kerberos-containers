@@ -1,3 +1,4 @@
+# Based on https://github.com/ist-dsi/docker-kerberos
 version: "2"
 services:
   kdc-kadmin:
