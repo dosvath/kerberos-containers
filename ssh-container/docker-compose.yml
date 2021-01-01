@@ -1,0 +1,14 @@
+version: "2"
+services:
+  ssh-server:
+    hostname: 'ssh-server'
+    build: .
+    ports:
+      - "2222:22"
+    entrypoint: /usr/sbin/sshd -D
+  ssh-client:
+    hostname: 'ssh-client'
+    build: .
+    entrypoint: /bin/bash 
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t

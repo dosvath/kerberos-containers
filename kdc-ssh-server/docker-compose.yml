@@ -1,8 +1,8 @@
 # Based on https://github.com/ist-dsi/docker-kerberos
 version: "2"
 services:
-  kdc-server:
-    hostname: 'kdc-server'
+  kdc-ssh-server:
+    hostname: 'kdc-ssh-server'
     build: .
     volumes:
       # This is needed otherwise there won't be enough entropy to generate a new kerberos realm
@@ -10,4 +10,4 @@ services:
     ports:
       - "749:749"
       - "88:88/udp"
-
+      - "2222:22"
