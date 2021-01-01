@@ -1,0 +1,11 @@
+version: "2"
+services:
+  kdc-kadmin:
+    build: .
+    volumes:
+      # This is needed otherwise there won't be enough entropy to generate a new kerberos realm
+      - /dev/urandom:/dev/random
+    ports:
+      - "749:749"
+      - "88:88/udp"
+
