@@ -1,6 +1,6 @@
 FROM debian:jessie
 
-EXPOSE 749 88
+EXPOSE 749 88/udp
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get -qq update
