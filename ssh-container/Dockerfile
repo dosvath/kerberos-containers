@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM ubuntu:latest
 
 EXPOSE 22
 
@@ -14,3 +14,5 @@ COPY sshd_config /etc/ssh/sshd_config
 # configuration for the SSH client
 COPY ssh_config /etc/ssh/ssh_config 
 
+# missing privilege separation directory fix
+RUN mkdir -p /run/sshd && chmod 755 /run/sshd
